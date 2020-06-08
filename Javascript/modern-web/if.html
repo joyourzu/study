@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>if 조건문</title>
+
+    <script>
+/*
+
+        var date = new Date();
+        var hours = date.getHours();
+        var today = date.getDate();
+        var year = date.getFullYear();
+        var month = date.getMonth();
+        var minute = date.getMinutes();
+
+        alert('현재 시간은' + hours + '시 입니다.');     // 24시간제로 값이 노출
+        alert('현재 날짜는' + today + '입니다');
+        alert(month);   //  대부분 프로그래밍 언어의 기본 라이브러리는 월을 셀때  '0' 부터 센다.
+                        //  그렇기 때문에 0~11월로 노출. 현재 월보다 -1 값으로 노출된다
+        alert(year);
+        alert(minute);
+
+*/
+
+        // 현재 시간을 구한 뒤
+        var date = new Date();
+        var hours = date.getHours();
+
+/*
+        // 간단한 조건문
+        if(hours < 12) {            // 현재 시간이 12시 이전일 경우
+                                    // 내부의 코드를 실행
+            alert('오전입니다');
+        } else {                    // 현재 시간이 12시 이후일 경우
+            alert('오후입니다');
+        }
+
+
+        // 여러 조건 작성 = 좋은 방법 아님
+        if (hours < 6) {                  // 6시 이전
+            alert('새벽입니다');
+        }
+        if (6 <= hours && hours < 12) {   // 6시~12시 사이
+            alert('오전입니다');
+        }
+        if (12 <= hours && hours < 18) {  // 12시~18시 사이
+            alert('낮입니다');
+        }
+        if (18 <= hours) {                // 18시 이후
+            alert('저녁입니다')
+        }
+
+        // 중첩 조건문
+        if (hours < 6) {
+            alert('새벽입니다');
+        } else{
+            if (6 <= hours && hours < 12) {
+                alert('오전입니다');
+            } else {
+                if (12 <= hours && hours < 18) {
+                    alert('낮입니다');
+                } else {
+                    if (18 <= hours) {
+                        alert('저녁입니다')
+                    }
+                }
+            }
+        }
+
+        // if else if 로 변경 = {} 괄호 생략 가능
+
+        if (hours < 6) {                            // 6시 이전
+            alert('새벽입니다');
+        } else if (6 <= hours && hours < 12) {      // 6시~12시 사이
+            alert('오전입니다');
+        } else if (12 <= hours && hours < 18) {     // 12시~18시 사이
+            alert('오후입니다');
+        } else if (18 <= hours) {                   // 18시 이후
+            alert('저녁입니다');
+        }
+*/
+
+
+        // if else if 로 변경 = 조건문 생략 가능
+
+        if (hours < 6) {              // 6시 이전
+            alert('새벽입니다');
+        } else if (hours < 12) {      // 6시~12시 사이
+            alert('오전입니다');
+        } else if (hours < 18) {      // 12시~18시 사이
+            alert('오후시간입니다');
+        } else{                       // 18시 이후
+            alert('저녁입니다');
+        }
+
+
+        // TIP - 많은 조건 예제를 만들어 보는게 좋다
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
