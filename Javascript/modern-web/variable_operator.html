@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>7. 변수, 함께하는 연산자</title>
+    <script>
+        // 변수를 선언하고 할당 = 초기화
+        var input = 100;
+
+        // 선언과 할당을 별도로
+        var a;
+        a = 100;    // 할당이 undefined(미정) 값에 처음 값을 넣는 것을 초기화
+
+
+        // 변수가 여러개
+        var radius = 10,
+            pi = 3.14159265;
+
+        alert(2 * pi * radius);
+
+
+        // 복합 대행 연산자
+        var radius = 10;
+        var message = '안녕하세요';
+
+        radius = radius + 10;   // radius = 10 + 10 = 20
+        radius += 10;   // radius = radius + 10 = 20 + 10 = 30
+        alert(radius);  // 30
+        radius -= 10;   // radius = radius - 10 = 20
+        alert(radius);  // 20
+        radius *= 10;   // radius = radius * 10 = 20 * 10 = 200
+        alert(radius);  // 20
+        radius /= 10;   // radius = radius / 10 = 200 / 20 = 20
+        alert(radius);  // 20
+        radius %= 5;    // radius = radius % 5 = 20 % 5 = 0
+        alert(radius);  // 0
+
+        message = message + message;
+        message += message;
+
+        // 증감 연산자
+        alert(radius++);    // 후위
+        // alert(radius);
+        // radius = radius + 1   // radius = 10 + 1 =11
+
+        alert(++radius)     // 전위
+        // radius = radius + 1  // radius = 11 + 1 =12
+        // alert(radius);       // 12
+
+        // 추천하는 방법
+        alert(radius);
+        radius++;
+
+        // 절대 사용하지 말아야 할 스타일
+        radius = radius++ + ++radius;
+
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
