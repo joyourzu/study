@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>17. Switch 조건문 </title>
+    <script>
+        // var input  = Number(prompt('숫자를 입력해주세요', '숫자'));
+
+        // 아무것도 입력하지 않을 경우 추가
+        var rawInput = prompt('숫자를 입력해주세요','숫자');
+        if (rawInput == '') {
+            rawInput = "abcd";
+        }
+        var input = Number(rawInput);
+
+
+        switch (input % 2) {
+            case 0 :
+                 alert('짝수입니다');
+                 break;                 // 빠져나오기
+            case 1 :
+                alert('홀수입니다');
+                break;
+            default:
+                alert('숫자가 아닙니다.');
+                break;
+        }
+
+
+
+/*
+        // 계절을 구분하는 예제
+
+        var date = new Date();
+        var month = date.getMonth() + 1;
+
+        switch (month) {    // if 조건문과 다르게 범위를 지정할수 없음 (있지만
+            case 3 :
+            case 4 :
+            case 5 :
+                alert('봄 입니다');
+                break;
+            case 6 :
+            case 7 :
+            case 8 :
+                alert('여름 입니다');
+                break;
+            case 8 :
+            case 10 :
+            case 11 :
+                alert('가을 입니다');
+                break;
+            case 12 :
+            case 1 :
+            case 2 :
+                alert('겨울 입니다');
+                break;
+
+        }
+
+        Q : switch 문에서 case 다음에 default 가 없어도 되는지?
+*/
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
