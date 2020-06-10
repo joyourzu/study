@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>18. 삼항 연산자와 짧은 조건문</title>
+
+    <script>
+/*
+
+        // 항이 3개라는 의미
+        // 삼항 = 조건부 연산자
+        let input = prompt('숫자를 입력해주세요', '');
+        let number = Number(input);
+        // 자연수인지 구별하는 조건문
+        if(number > 0) {
+            alert('자연수입니다.');
+        } else {
+            alert('자연수가 아닙니다.');
+        }
+        // 위의 조건문을 삼항연산자로 변경
+        (number > 0 ) ? alert('자연수입니다') : alert('자연수가 아닙니다.');
+*/
+
+        // 짧은 조건문
+        let number = Number(prompt('숫자를 입력해주세요',''));
+
+        (number > 0) || alert('자연수가 아닙니다.');
+        (number > 0) && alert('자연수 입니다.');
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
