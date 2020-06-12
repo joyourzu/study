@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>break와 continue</title>
+
+    <script>
+
+        // break = 적어도 하나 벗어나기 예제
+        while (true) {
+            if (confirm("종료하시겠습니까?")){
+                break;
+            }
+        }
+        alert("종료되었습니다.");
+
+
+        // 사용 예제 - '적어도 하나'
+        let array = [200, 100, 50, 10, 100, 10, 20];
+        let isUnder20 = false;
+
+        for (let i = 0; i < array.length; i++){ // for 반복문을 써서 배열을 반복하게
+            if(array[i] < 20){
+                isUnder20 = true;
+                break;
+            }
+        }
+
+        if (isUnder20){
+            alert("배열 내부에 20보다 작은 값이 있습니다.");
+        } else {
+            alert("배열 내부에 20보다 작은 값이 없습니다.");
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
