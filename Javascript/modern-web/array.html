@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang=ko>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>20. 배열</title>
+    <script>
+
+        var array = [10,20,30,40,50,60];
+        alert(array);
+
+        array[0] = 100;
+        alert(array);
+        alert(array.length); // 6
+        alert(array[array.length - 1]); // 마지막 번째 요소
+
+
+        // 배열 뒤에 요소를 추가
+        array[array.length] = 90;
+        //array.push();
+        alert(array);
+
+        //배열의 요소를 제거
+        array.splice(1, 1);
+        alert(array);
+
+
+        // 문자열 배열
+        var string = "가나다라마바";
+        string[0];
+        string[1];
+        string[2];
+        string[0] = "하";
+        string.length
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
