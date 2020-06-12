@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang=ko>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for 반복문</title>
+
+    <script>
+/*
+        // 자주 쓰는 형태
+        for (var i = 0; i < length; i++) {
+        // <문장>
+        }
+
+        for (var i = 0; i < 5; i++){
+            // 0 번째 반복 : i = 0
+            // 1 번째 반복 : i = 1
+            // 2 번째 반복 : i = 2
+            // 3 번째 반복 : i = 3
+            // 4 번째 반복 : i = 4
+            alert(i + "번째입니다.")
+            ;
+        }
+*/
+
+        // for 반복문은 배열과 함게 사용하는 경우가 많음
+        var array = ["과자", "사탕", "젤리"];
+        for (var i = 0; i < array.length; i++){
+            alert(array[i]);
+        }
+
+
+        // forr - reverse 반대로
+
+        for (var i = array.length - 1; i >= 0; i--){
+            // 0번째 반복 : i = 2 = array[2] => 젤리
+            // 1번째 반복 : i = 1 = array[1] => 사탕
+            // 2번째 반복 : i = 0 = array[0] => 과자
+            // 3번재 반복 : ㅑ = -1 // 반복 탈출
+            alert(array[i]);
+        }
+
+    </script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

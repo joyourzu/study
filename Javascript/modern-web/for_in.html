@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang=>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>23. for in 반복문</title>
+
+
+    <script>
+        // for 문
+        let array = ["과자", "사탕", "젤리"];
+/*
+        for (let i = 0; i < array.length; i++){
+            alert(array[i]);
+        }
+
+        // for in 반복문으로 더 간단하게 - 자스의 차이는
+        for (let i in array){ alert(array[i]);}
+*/
+        for ( let i in array){
+            alert(i);  // 0, 1, 2
+        }
+
+        // for of
+        for (var item of array) {
+            alert(item);    // 과자, 사탕, 젤리
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
