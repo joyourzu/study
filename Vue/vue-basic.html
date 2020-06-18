@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue basic</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- {{person.name}} {{person.age}} -->
+        {{nextYear('안녕하세요')}}  <!--함수일 때는 괄호를 넣어준다, 인자 =  안녕하세요-->
+        <input :type="typeData" :value="inputData"> <!-- v-bind: 는 생략가능해서 :  으로 줄여 쓸수 있음 -->
+        <a v-bind:href="getGoogleLink('doodles')">구글 링크</a>
+        <button>Click Me</button>
+    </div>
+    
+    <script>
+        new Vue({
+            el: '#app',
+            data: { // 오브젝트
+                person: {
+                    name : 'jojo',   // name 변수
+                    age : 20
+                },
+                // 데이터바인딩 = v-bind: 넣어서 연결
+                inputData : 'hello',
+                typeData:'number',
+                linkData: 'https://www.google.co.kr/'
+            },
+            methods:{  // 함수가 들어갈수 있음
+
+                // function을 지울 수 있음 > ': function 제거'  nextYear: function(greeting) 
+                nextYear(greeting){  // greeting 매개변수 추가
+                    return greeting + ' ! ' + this.person.name + ' 내년에 ' + (this.person.age + 1) + ' 살 입니다';  // this에 바로 데이터를 넣어준다
+                },
+                otherMethod(){
+                    this.nextYear();
+                },
+                getGoogleLink(channel) {
+                    return this.linkData + channel;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
