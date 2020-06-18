@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue - watch</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+        <br>
+        {{ updated }}
+        <button @click="changeMessage">click</button>
+    </div>
+    
+    <script>
+        new Vue({
+            el: '#app',
+            data: {    
+                message: '안녕하세요',
+                updated: '아니요'
+            },
+            methods:{ 
+                changeMessage(){
+                    this.message = '메시지';
+                }
+            },
+            computed: {
+                // 계산된 getter
+                reversedMessage: function () {
+                return this.message.split('').reverse().join('')
+                }
+            },
+            watch:{ 
+                // watch는 매개변수로 newVal,oldval를 받는다
+                message(newVal, oldVal){
+                    console.log(newVal, oldVal);
+                    this.updated = '네' ;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
