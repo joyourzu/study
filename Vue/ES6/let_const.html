@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6 - let, const</title>
+</head>
+<script>
+
+    // let 똑같은 변수를 재선언할 때 오류
+    let a = 10;
+    let b = 20; // Uncaught SyntaxError: Identifier 'a' has already been declared
+
+
+    // const 값을 다시 할당했을 때 오류
+    const c = 30;
+    // a = 20; // Uncaught TypeError: Assignment to constant variable.
+
+
+    // 객체로 선언하고 속성 값을 변경
+    const obj = {
+        num: 10,
+        text: 'hi'
+    };
+    console.log(obj.num); // 10
+
+    obj.num = 20;
+    console.log(obj.num); // 20
+
+
+
+    // 배열로 선언하고 배열 요소를 추가
+    const array = [];
+    console.log(array); // []
+
+    array.push(10);
+    console.log(array); // [10]
+
+
+
+    // for 반복문에서의 var 유효 범위 - 영향을 받는 중
+    var z = 10;
+    for (var z = 0; z < 5; z++) {
+        console.log(z); // 0 1 2 3 4 5
+    }
+    console.log(z); // 6
+
+
+    // const와 let의 블록 유효범위
+    var cl = 10;
+    for (let cl = 0; cl < 5; cl++) {
+        console.log(cl); // 0 1 2 3 4 5
+    }
+    console.log(cl); // 10
+
+</script>
+<body>
+
+</body>
+</html>
