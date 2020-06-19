@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue - 클래스와 스타일 바인딩</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .red{color: red;}
+        .bold{font-weight: bold;}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div 
+            v-bind:class="{ red: isRed }"  
+            v-bind:style="{fontSize:size}"
+        > 
+        Hello
+        </div> 
+        <button v-on:click="update">Click</button>
+    </div>
+    
+    <script>
+        new Vue({
+            el: '#app',
+            data: {    
+                isRed: false,    // 처음엔 적용이 안돼야 하기에 false
+                size: '30px',
+            },
+            methods:{ 
+               update() {
+                   this.isRed = !this.isRed;    // 
+               }
+            },
+           
+        })
+    </script>
+</body>
+</html>
