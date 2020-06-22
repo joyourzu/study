@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue - v-for </title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div>
+            {{ peple[0].name }} {{ peple[0].age }}
+        </div>
+        <div>
+            {{ peple[1].name }} {{ peple[1].age }}
+        </div>
+        <div>
+            {{ peple[2].name }} {{ peple[2].age }}
+        </div>
+        <div>
+            {{ peple[3].name }} {{ peple[3].age }}
+        </div>
+
+        <hr>
+         <!-- key 속성을 넣어주고, 고유한 아이디 값을 넣어준다-->
+        <div v-for="(person, index) in people" :key="person.id">
+            {{ person.name }} {{ person.age }} {{ index }}
+        </div>
+
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                people: [
+                    // 데이터 베이스엔 고유한 id 값이 있다.
+                    { id:1, name:'a', age:20 },
+                    { id:2, name:'b', age:21 },
+                    { id:3, name:'c', age:22 },
+                    { id:4, name:'d', age:23 },
+                    { id:5, name:'e', age:24 },
+                    { id:6, name:'f', age:25 },
+                ]
+            },
+            methods:{
+
+            },
+
+        })
+    </script>
+</body>
+</html>
